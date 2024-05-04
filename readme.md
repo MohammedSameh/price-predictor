@@ -26,8 +26,9 @@ pip install scikit-learn pandas pydantic uvicorn
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 Note: Replace 8000 with your desired port number if needed.
 
+## Request
 
-### The API provides a POST endpoint at /predict for making predictions. You can use tools like Postman or curl to send requests with JSON data representing phone specifications according to the schema defined in the PhoneData class within main.py.
+The API provides a POST endpoint at /predict for making predictions. You can use tools like Postman or curl to send requests with JSON data representing phone specifications according to the schema defined in the PhoneData class within main.py.
 
 ### Example Request:
 
@@ -54,9 +55,9 @@ Note: Replace 8000 with your desired port number if needed.
   "wifi": true
 }
 
-### Response:
+## Response:
 
-### The API will respond with a JSON object containing the predicted price range for the provided phone specifications.
+The API will respond with a JSON object containing the predicted price range for the provided phone specifications.
 
 ### Example Response:
 
