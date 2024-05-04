@@ -5,25 +5,36 @@ This project implements a FastAPI API for predicting phone price ranges based on
 ## Dependencies:
 
 Python 3.x (https://www.python.org/downloads/)
+
 scikit-learn (https://scikit-learn.org/)
+
 pandas (https://pandas.pydata.org/)
+
 pydantic (https://docs.pydantic.dev/latest/)
+
 uvicorn (https://www.uvicorn.org/)
 
 ## Installation:
 
 1. Create a virtual environment (optional) for managing dependencies:
+
+```
 python -m venv venv
 source venv/bin/activate  # Activate virtual environment (Linux/macOS)
 venv\Scripts\activate.bat  # Activate virtual environment (Windows)
+```
 
-2. Install required libraries within the virtual environment:
+3. Install required libraries within the virtual environment:
+```
 pip install scikit-learn pandas pydantic uvicorn
+```
 
-3. Ensure the pre-trained Random Forest model is saved as price_range_predictor.pkl. Ensure this file is in the same directory as your main.py script.
+4. Ensure the pre-trained Random Forest model is saved as price_range_predictor.pkl. Ensure this file is in the same directory as your main.py script.
 
-4. Run the API:
+5. Run the API:
+```
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
 Note: Replace 8000 with your desired port number if needed.
 
 ## Request
@@ -32,6 +43,7 @@ The API provides a POST endpoint at /predict for making predictions. You can use
 
 ### Example Request:
 
+```
 {
   "battery_power": 5000,
   "blue": true,
@@ -54,6 +66,7 @@ The API provides a POST endpoint at /predict for making predictions. You can use
   "touch_screen": true,
   "wifi": true
 }
+```
 
 ## Response:
 
@@ -61,6 +74,8 @@ The API will respond with a JSON object containing the predicted price range for
 
 ### Example Response:
 
+```
 {
   "predicted_price_range": 1  
 }
+```
