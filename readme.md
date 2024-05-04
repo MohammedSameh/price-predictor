@@ -1,8 +1,8 @@
-Phone Price Range Prediction API with FastAPI
+# Phone Price Range Prediction API with FastAPI
 
 This project implements a FastAPI API for predicting phone price ranges based on phone specifications. It utilizes a pre-trained Random Forest model to make predictions.
 
-Dependencies:
+## Dependencies:
 
 Python 3.x (https://www.python.org/downloads/)
 scikit-learn (https://scikit-learn.org/)
@@ -10,7 +10,7 @@ pandas (https://pandas.pydata.org/)
 pydantic (https://docs.pydantic.dev/latest/)
 uvicorn (https://www.uvicorn.org/)
 
-Installation:
+## Installation:
 
 1. Create a virtual environment (optional) for managing dependencies:
 python -m venv venv
@@ -27,9 +27,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 Note: Replace 8000 with your desired port number if needed.
 
 
-The API provides a POST endpoint at /predict for making predictions. You can use tools like Postman or curl to send requests with JSON data representing phone specifications according to the schema defined in the PhoneData class within main.py.
+### The API provides a POST endpoint at /predict for making predictions. You can use tools like Postman or curl to send requests with JSON data representing phone specifications according to the schema defined in the PhoneData class within main.py.
 
-Example Request:
+### Example Request:
 
 {
   "battery_power": 5000,
@@ -54,11 +54,11 @@ Example Request:
   "wifi": true
 }
 
-Response:
+### Response:
 
-The API will respond with a JSON object containing the predicted price range for the provided phone specifications.
+### The API will respond with a JSON object containing the predicted price range for the provided phone specifications.
 
-Example Response:
+### Example Response:
 
 {
   "predicted_price_range": 1  
